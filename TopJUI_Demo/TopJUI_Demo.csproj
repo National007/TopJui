@@ -1,0 +1,847 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6D88601-933D-4F19-B28C-306EC1D5DDF9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TopJUI_Demo</RootNamespace>
+    <AssemblyName>TopJUI_Demo</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.1.0.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.1.0.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.1.0.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.0.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.0.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.0.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.0.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="json\echarts\index.html" />
+    <Content Include="json\echarts\json2Str.js" />
+    <Content Include="json\response\export.html" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="json\combobox\city.json" />
+    <Content Include="json\combobox\country.json" />
+    <Content Include="json\combobox\district.json" />
+    <Content Include="json\combobox\nation.json" />
+    <Content Include="json\combobox\nativePlace.json" />
+    <Content Include="json\combobox\province.json" />
+    <Content Include="json\config\config_1.json" />
+    <Content Include="json\datagrid\member.json" />
+    <Content Include="json\datagrid\user.json" />
+    <Content Include="json\dictionary\models.json" />
+    <Content Include="json\dictionary\yesOrNo.json" />
+    <Content Include="json\echarts\bar.json" />
+    <Content Include="json\echarts\line.json" />
+    <Content Include="json\echarts\map.json" />
+    <Content Include="json\echarts\pie.json" />
+    <Content Include="json\echarts\radar.json" />
+    <Content Include="json\menu\menu_1.json" />
+    <Content Include="json\menu\menu_1325.json" />
+    <Content Include="json\menu\menu_1327.json" />
+    <Content Include="json\menu\menu_1328.json" />
+    <Content Include="json\menu\menu_1329.json" />
+    <Content Include="json\menu\menu_1330.json" />
+    <Content Include="json\menu\menu_1331.json" />
+    <Content Include="json\menu\menu_1350.json" />
+    <Content Include="json\menu\menu_13501.json" />
+    <Content Include="json\menu\menu_13502.json" />
+    <Content Include="json\menu\menu_13503.json" />
+    <Content Include="json\menu\menu_1364.json" />
+    <Content Include="json\menu\menu_214.json" />
+    <Content Include="json\menu\menu_215.json" />
+    <Content Include="json\menu\menu_60.json" />
+    <Content Include="json\menu\menu_658.json" />
+    <Content Include="json\menu\menu_659.json" />
+    <Content Include="json\menu\menu_660.json" />
+    <Content Include="json\menu\menu_661.json" />
+    <Content Include="json\product\detail.json" />
+    <Content Include="json\product\list.json" />
+    <Content Include="json\response\delete.json" />
+    <Content Include="json\response\failure.json" />
+    <Content Include="json\response\login.json" />
+    <Content Include="json\response\save.json" />
+    <Content Include="json\response\success.json" />
+    <Content Include="json\response\update.json" />
+    <Content Include="json\response\upload.json" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap-ext.css" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="static\plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="static\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="static\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="static\plugins\bootstrap\js\npm.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\css\bootstrap-datetimepicker.css" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\bootstrap-datetimepicker.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ar.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.az.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.bg.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.bn.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ca.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.cs.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.da.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.de.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ee.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.el.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.es.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.fi.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.fr.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.he.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.hr.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.hu.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.hy.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.id.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.is.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.it.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ja.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ka.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ko.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.lt.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.lv.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ms.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.nb.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.nl.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.no.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pl.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pt-BR.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.pt.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ro.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.rs-latin.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.rs.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ru.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.sk.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.sl.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.sv.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.sw.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.th.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.tr.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.ua.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.uk.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.zh-CN.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-datetimepicker\js\locales\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-paginator\bootstrap-paginator-ext.js" />
+    <Content Include="static\plugins\bootstrap\plugins\bootstrap-paginator\bootstrap-paginator.js" />
+    <Content Include="static\plugins\bootstrap\plugins\html5shiv.min.js" />
+    <Content Include="static\plugins\bootstrap\plugins\respond.min.js" />
+    <Content Include="static\plugins\echarts\echarts.common.min.js" />
+    <Content Include="static\plugins\echarts\echarts.min.js" />
+    <Content Include="static\plugins\echarts\echarts.simple.min.js" />
+    <Content Include="static\plugins\font-awesome\css\font-awesome.css" />
+    <Content Include="static\plugins\font-awesome\css\font-awesome.min.css" />
+    <Content Include="static\plugins\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="static\plugins\jquery\jquery.cookie.js" />
+    <Content Include="static\plugins\jquery\jquery.min.js" />
+    <Content Include="static\plugins\json2.js" />
+    <Content Include="static\plugins\layui\css\layui.css" />
+    <Content Include="static\plugins\layui\css\layui.mobile.css" />
+    <Content Include="static\plugins\layui\css\modules\code.css" />
+    <Content Include="static\plugins\layui\css\modules\laydate\default\laydate.css" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\icon-ext.png" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\icon.png" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\layer.css" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\loading-0.gif" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\loading-1.gif" />
+    <Content Include="static\plugins\layui\css\modules\layer\default\loading-2.gif" />
+    <Content Include="static\plugins\layui\font\iconfont.svg" />
+    <Content Include="static\plugins\layui\images\face\0.gif" />
+    <Content Include="static\plugins\layui\images\face\1.gif" />
+    <Content Include="static\plugins\layui\images\face\10.gif" />
+    <Content Include="static\plugins\layui\images\face\11.gif" />
+    <Content Include="static\plugins\layui\images\face\12.gif" />
+    <Content Include="static\plugins\layui\images\face\13.gif" />
+    <Content Include="static\plugins\layui\images\face\14.gif" />
+    <Content Include="static\plugins\layui\images\face\15.gif" />
+    <Content Include="static\plugins\layui\images\face\16.gif" />
+    <Content Include="static\plugins\layui\images\face\17.gif" />
+    <Content Include="static\plugins\layui\images\face\18.gif" />
+    <Content Include="static\plugins\layui\images\face\19.gif" />
+    <Content Include="static\plugins\layui\images\face\2.gif" />
+    <Content Include="static\plugins\layui\images\face\20.gif" />
+    <Content Include="static\plugins\layui\images\face\21.gif" />
+    <Content Include="static\plugins\layui\images\face\22.gif" />
+    <Content Include="static\plugins\layui\images\face\23.gif" />
+    <Content Include="static\plugins\layui\images\face\24.gif" />
+    <Content Include="static\plugins\layui\images\face\25.gif" />
+    <Content Include="static\plugins\layui\images\face\26.gif" />
+    <Content Include="static\plugins\layui\images\face\27.gif" />
+    <Content Include="static\plugins\layui\images\face\28.gif" />
+    <Content Include="static\plugins\layui\images\face\29.gif" />
+    <Content Include="static\plugins\layui\images\face\3.gif" />
+    <Content Include="static\plugins\layui\images\face\30.gif" />
+    <Content Include="static\plugins\layui\images\face\31.gif" />
+    <Content Include="static\plugins\layui\images\face\32.gif" />
+    <Content Include="static\plugins\layui\images\face\33.gif" />
+    <Content Include="static\plugins\layui\images\face\34.gif" />
+    <Content Include="static\plugins\layui\images\face\35.gif" />
+    <Content Include="static\plugins\layui\images\face\36.gif" />
+    <Content Include="static\plugins\layui\images\face\37.gif" />
+    <Content Include="static\plugins\layui\images\face\38.gif" />
+    <Content Include="static\plugins\layui\images\face\39.gif" />
+    <Content Include="static\plugins\layui\images\face\4.gif" />
+    <Content Include="static\plugins\layui\images\face\40.gif" />
+    <Content Include="static\plugins\layui\images\face\41.gif" />
+    <Content Include="static\plugins\layui\images\face\42.gif" />
+    <Content Include="static\plugins\layui\images\face\43.gif" />
+    <Content Include="static\plugins\layui\images\face\44.gif" />
+    <Content Include="static\plugins\layui\images\face\45.gif" />
+    <Content Include="static\plugins\layui\images\face\46.gif" />
+    <Content Include="static\plugins\layui\images\face\47.gif" />
+    <Content Include="static\plugins\layui\images\face\48.gif" />
+    <Content Include="static\plugins\layui\images\face\49.gif" />
+    <Content Include="static\plugins\layui\images\face\5.gif" />
+    <Content Include="static\plugins\layui\images\face\50.gif" />
+    <Content Include="static\plugins\layui\images\face\51.gif" />
+    <Content Include="static\plugins\layui\images\face\52.gif" />
+    <Content Include="static\plugins\layui\images\face\53.gif" />
+    <Content Include="static\plugins\layui\images\face\54.gif" />
+    <Content Include="static\plugins\layui\images\face\55.gif" />
+    <Content Include="static\plugins\layui\images\face\56.gif" />
+    <Content Include="static\plugins\layui\images\face\57.gif" />
+    <Content Include="static\plugins\layui\images\face\58.gif" />
+    <Content Include="static\plugins\layui\images\face\59.gif" />
+    <Content Include="static\plugins\layui\images\face\6.gif" />
+    <Content Include="static\plugins\layui\images\face\60.gif" />
+    <Content Include="static\plugins\layui\images\face\61.gif" />
+    <Content Include="static\plugins\layui\images\face\62.gif" />
+    <Content Include="static\plugins\layui\images\face\63.gif" />
+    <Content Include="static\plugins\layui\images\face\64.gif" />
+    <Content Include="static\plugins\layui\images\face\65.gif" />
+    <Content Include="static\plugins\layui\images\face\66.gif" />
+    <Content Include="static\plugins\layui\images\face\67.gif" />
+    <Content Include="static\plugins\layui\images\face\68.gif" />
+    <Content Include="static\plugins\layui\images\face\69.gif" />
+    <Content Include="static\plugins\layui\images\face\7.gif" />
+    <Content Include="static\plugins\layui\images\face\70.gif" />
+    <Content Include="static\plugins\layui\images\face\71.gif" />
+    <Content Include="static\plugins\layui\images\face\8.gif" />
+    <Content Include="static\plugins\layui\images\face\9.gif" />
+    <Content Include="static\plugins\layui\layui.all.js" />
+    <Content Include="static\plugins\layui\layui.js" />
+    <Content Include="static\plugins\layui\lay\modules\carousel.js" />
+    <Content Include="static\plugins\layui\lay\modules\code.js" />
+    <Content Include="static\plugins\layui\lay\modules\element.js" />
+    <Content Include="static\plugins\layui\lay\modules\flow.js" />
+    <Content Include="static\plugins\layui\lay\modules\form.js" />
+    <Content Include="static\plugins\layui\lay\modules\jquery.js" />
+    <Content Include="static\plugins\layui\lay\modules\laydate.js" />
+    <Content Include="static\plugins\layui\lay\modules\layedit.js" />
+    <Content Include="static\plugins\layui\lay\modules\layer.js" />
+    <Content Include="static\plugins\layui\lay\modules\laypage.js" />
+    <Content Include="static\plugins\layui\lay\modules\laytpl.js" />
+    <Content Include="static\plugins\layui\lay\modules\mobile.js" />
+    <Content Include="static\plugins\layui\lay\modules\table.js" />
+    <Content Include="static\plugins\layui\lay\modules\tree.js" />
+    <Content Include="static\plugins\layui\lay\modules\upload.js" />
+    <Content Include="static\plugins\layui\lay\modules\util.js" />
+    <Content Include="static\plugins\topjui\topjui.function.js" />
+    <Content Include="static\plugins\topjui\topjui.parenttab.js" />
+    <Content Include="static\plugins\topjui\topjui.uploader.js" />
+    <Content Include="static\plugins\ueditor\dialogs\anchor\anchor.html" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\attachment.css" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\attachment.html" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\attachment.js" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_chm.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_default.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_doc.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_exe.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_jpg.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_mp3.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_mv.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_pdf.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_ppt.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_psd.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_rar.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_txt.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\fileTypeImages\icon_xls.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\alignicon.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\alignicon.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\bg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\file-icons.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\file-icons.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\icons.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\icons.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\image.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\progress.png" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\success.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\attachment\images\success.png" />
+    <Content Include="static\plugins\ueditor\dialogs\background\background.css" />
+    <Content Include="static\plugins\ueditor\dialogs\background\background.html" />
+    <Content Include="static\plugins\ueditor\dialogs\background\background.js" />
+    <Content Include="static\plugins\ueditor\dialogs\background\images\bg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\background\images\success.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\chart.config.js" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\charts.css" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\charts.html" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\charts.js" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts0.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts1.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts2.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts3.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts4.png" />
+    <Content Include="static\plugins\ueditor\dialogs\charts\images\charts5.png" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\emotion.css" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\emotion.html" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\emotion.js" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\0.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\gmap\gmap.html" />
+    <Content Include="static\plugins\ueditor\dialogs\help\help.css" />
+    <Content Include="static\plugins\ueditor\dialogs\help\help.html" />
+    <Content Include="static\plugins\ueditor\dialogs\help\help.js" />
+    <Content Include="static\plugins\ueditor\dialogs\image\image.css" />
+    <Content Include="static\plugins\ueditor\dialogs\image\image.html" />
+    <Content Include="static\plugins\ueditor\dialogs\image\image.js" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\alignicon.jpg" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\bg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\icons.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\icons.png" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\image.png" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\progress.png" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\success.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\image\images\success.png" />
+    <Content Include="static\plugins\ueditor\dialogs\insertframe\insertframe.html" />
+    <Content Include="static\plugins\ueditor\dialogs\internal.js" />
+    <Content Include="static\plugins\ueditor\dialogs\link\link.html" />
+    <Content Include="static\plugins\ueditor\dialogs\map\map.html" />
+    <Content Include="static\plugins\ueditor\dialogs\map\show.html" />
+    <Content Include="static\plugins\ueditor\dialogs\music\music.css" />
+    <Content Include="static\plugins\ueditor\dialogs\music\music.html" />
+    <Content Include="static\plugins\ueditor\dialogs\music\music.js" />
+    <Content Include="static\plugins\ueditor\dialogs\preview\preview.html" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\addimg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\brush.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\delimg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\delimgH.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\empty.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\emptyH.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\eraser.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\redo.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\redoH.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\scale.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\scaleH.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\size.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\undo.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\images\undoH.png" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\scrawl.css" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\scrawl.html" />
+    <Content Include="static\plugins\ueditor\dialogs\scrawl\scrawl.js" />
+    <Content Include="static\plugins\ueditor\dialogs\searchreplace\searchreplace.html" />
+    <Content Include="static\plugins\ueditor\dialogs\searchreplace\searchreplace.js" />
+    <Content Include="static\plugins\ueditor\dialogs\snapscreen\snapscreen.html" />
+    <Content Include="static\plugins\ueditor\dialogs\spechars\spechars.html" />
+    <Content Include="static\plugins\ueditor\dialogs\spechars\spechars.js" />
+    <Content Include="static\plugins\ueditor\dialogs\table\dragicon.png" />
+    <Content Include="static\plugins\ueditor\dialogs\table\edittable.css" />
+    <Content Include="static\plugins\ueditor\dialogs\table\edittable.html" />
+    <Content Include="static\plugins\ueditor\dialogs\table\edittable.js" />
+    <Content Include="static\plugins\ueditor\dialogs\table\edittd.html" />
+    <Content Include="static\plugins\ueditor\dialogs\table\edittip.html" />
+    <Content Include="static\plugins\ueditor\dialogs\template\config.js" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\bg.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\pre0.png" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\pre1.png" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\pre2.png" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\pre3.png" />
+    <Content Include="static\plugins\ueditor\dialogs\template\images\pre4.png" />
+    <Content Include="static\plugins\ueditor\dialogs\template\template.css" />
+    <Content Include="static\plugins\ueditor\dialogs\template\template.html" />
+    <Content Include="static\plugins\ueditor\dialogs\template\template.js" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\bg.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\file-icons.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\file-icons.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\icons.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\icons.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\image.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\progress.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\success.gif" />
+    <Content Include="static\plugins\ueditor\dialogs\video\images\success.png" />
+    <Content Include="static\plugins\ueditor\dialogs\video\video.css" />
+    <Content Include="static\plugins\ueditor\dialogs\video\video.html" />
+    <Content Include="static\plugins\ueditor\dialogs\video\video.js" />
+    <Content Include="static\plugins\ueditor\dialogs\webapp\webapp.html" />
+    <Content Include="static\plugins\ueditor\dialogs\wordimage\fClipboard_ueditor.swf" />
+    <Content Include="static\plugins\ueditor\dialogs\wordimage\imageUploader.swf" />
+    <Content Include="static\plugins\ueditor\dialogs\wordimage\tangram.js" />
+    <Content Include="static\plugins\ueditor\dialogs\wordimage\wordimage.html" />
+    <Content Include="static\plugins\ueditor\dialogs\wordimage\wordimage.js" />
+    <Content Include="static\plugins\ueditor\index.html" />
+    <Content Include="static\plugins\ueditor\jsp\lib\commons-codec-1.9.jar" />
+    <Content Include="static\plugins\ueditor\jsp\lib\commons-fileupload-1.3.1.jar" />
+    <Content Include="static\plugins\ueditor\jsp\lib\commons-io-2.4.jar" />
+    <Content Include="static\plugins\ueditor\jsp\lib\json.jar" />
+    <Content Include="static\plugins\ueditor\jsp\lib\ueditor-1.1.2.jar" />
+    <Content Include="static\plugins\ueditor\lang\en\en.js" />
+    <Content Include="static\plugins\ueditor\lang\en\images\addimage.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\background.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\button.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\copy.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\deletedisable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\deleteenable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\listbackground.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\localimage.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\music.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="static\plugins\ueditor\lang\en\images\upload.png" />
+    <Content Include="static\plugins\ueditor\lang\zh-cn\images\copy.png" />
+    <Content Include="static\plugins\ueditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="static\plugins\ueditor\lang\zh-cn\images\music.png" />
+    <Content Include="static\plugins\ueditor\lang\zh-cn\images\upload.png" />
+    <Content Include="static\plugins\ueditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="static\plugins\ueditor\themes\default\css\ueditor.css" />
+    <Content Include="static\plugins\ueditor\themes\default\css\ueditor.min.css" />
+    <Content Include="static\plugins\ueditor\themes\default\dialogbase.css" />
+    <Content Include="static\plugins\ueditor\themes\default\images\anchor.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\arrow.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\arrow_down.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\arrow_up.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\button-bg.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\cancelbutton.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\charts.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\cursor_h.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\cursor_h.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\cursor_v.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\cursor_v.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\dialog-title-bg.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\filescan.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\highlighted.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\icons-all.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\icons.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\icons.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\loaderror.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\loading.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\lock.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\neweditor-tab-bg.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\pagebreak.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\scale.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\sortable.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\spacer.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\sparator_v.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\table-cell-align.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\tangram-colorpicker.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\toolbar_bg.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\unhighlighted.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\upload.png" />
+    <Content Include="static\plugins\ueditor\themes\default\images\videologo.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\word.gif" />
+    <Content Include="static\plugins\ueditor\themes\default\images\wordpaste.png" />
+    <Content Include="static\plugins\ueditor\themes\iframe.css" />
+    <Content Include="static\plugins\ueditor\third-party\codemirror\codemirror.css" />
+    <Content Include="static\plugins\ueditor\third-party\codemirror\codemirror.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\mootools-adapter.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\mootools-adapter.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\prototype-adapter.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\prototype-adapter.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\standalone-framework.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\adapters\standalone-framework.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\highcharts-more.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\highcharts-more.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\highcharts.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\highcharts.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\annotations.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\annotations.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\canvas-tools.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\canvas-tools.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\data.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\data.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\drilldown.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\drilldown.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\exporting.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\exporting.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\funnel.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\funnel.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\heatmap.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\heatmap.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\map.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\map.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\no-data-to-display.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\modules\no-data-to-display.src.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\themes\dark-blue.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\themes\dark-green.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\themes\gray.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\themes\grid.js" />
+    <Content Include="static\plugins\ueditor\third-party\highcharts\themes\skies.js" />
+    <Content Include="static\plugins\ueditor\third-party\jquery-1.10.2.js" />
+    <Content Include="static\plugins\ueditor\third-party\jquery-1.10.2.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\snapscreen\UEditorSnapscreen.exe" />
+    <Content Include="static\plugins\ueditor\third-party\SyntaxHighlighter\shCore.js" />
+    <Content Include="static\plugins\ueditor\third-party\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\font\vjs.svg" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\video-js.css" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\video-js.min.css" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\video-js.swf" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\video.dev.js" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\video.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\Uploader.swf" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.css" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.custom.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.custom.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.flashonly.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.flashonly.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.html5only.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.html5only.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.withoutimage.js" />
+    <Content Include="static\plugins\ueditor\third-party\webuploader\webuploader.withoutimage.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\xss.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\zeroclipboard\ZeroClipboard.js" />
+    <Content Include="static\plugins\ueditor\third-party\zeroclipboard\ZeroClipboard.min.js" />
+    <Content Include="static\plugins\ueditor\third-party\zeroclipboard\ZeroClipboard.swf" />
+    <Content Include="static\plugins\ueditor\ueditor.all.js" />
+    <Content Include="static\plugins\ueditor\ueditor.all.min.js" />
+    <Content Include="static\plugins\ueditor\ueditor.config.js" />
+    <Content Include="static\plugins\ueditor\ueditor.config_default.js" />
+    <Content Include="static\plugins\ueditor\ueditor.parse.js" />
+    <Content Include="static\plugins\ueditor\ueditor.parse.min.js" />
+    <Content Include="static\plugins\ueditor\version-1.4.3.3.txt" />
+    <Content Include="static\plugins\webuploader\css\webuploader.css" />
+    <Content Include="static\plugins\webuploader\js\upload.js" />
+    <Content Include="static\plugins\webuploader\js\Uploader.swf" />
+    <Content Include="static\plugins\webuploader\js\webuploader.min.js" />
+    <Content Include="static\public\jquery-1.10.2.js" />
+    <Content Include="static\public\jquery-1.10.2.min.js" />
+    <Content Include="static\public\js\topjui.config.js" />
+    <Content Include="static\public\js\topjui.index.js" />
+    <Content Include="topjui\css\Login.css" />
+    <Content Include="topjui\css\topjui.core.min.css" />
+    <Content Include="topjui\css\topjui.timeaxis.css" />
+    <Content Include="topjui\image\ajax-loader.gif" />
+    <Content Include="topjui\image\avatar.jpg" />
+    <Content Include="topjui\image\checkbox.png" />
+    <Content Include="topjui\image\favicon.ico" />
+    <Content Include="topjui\image\loading-bg.png" />
+    <Content Include="topjui\image\loading-dot.png" />
+    <Content Include="topjui\image\loading-img.png" />
+    <Content Include="topjui\image\loading\loading-bg.png" />
+    <Content Include="topjui\image\loading\loading-dot.png" />
+    <Content Include="topjui\image\loading\loading-img.png" />
+    <Content Include="topjui\image\loginBg.jpg" />
+    <Content Include="topjui\image\radiobox.png" />
+    <Content Include="topjui\image\skin\skin-black.png" />
+    <Content Include="topjui\image\skin\skin-blacklight.png" />
+    <Content Include="topjui\image\skin\skin-blue.png" />
+    <Content Include="topjui\image\skin\skin-bluelight.png" />
+    <Content Include="topjui\image\skin\skin-green.png" />
+    <Content Include="topjui\image\skin\skin-greenlight.png" />
+    <Content Include="topjui\image\skin\skin-purple.png" />
+    <Content Include="topjui\image\skin\skin-purplelight.png" />
+    <Content Include="topjui\image\skin\skin-red.png" />
+    <Content Include="topjui\image\skin\skin-redlight.png" />
+    <Content Include="topjui\image\skin\skin-yellow.png" />
+    <Content Include="topjui\image\skin\skin-yellowlight.png" />
+    <Content Include="topjui\image\timeaxis\bg_1.png" />
+    <Content Include="topjui\image\timeaxis\log\circle-h.png" />
+    <Content Include="topjui\image\timeaxis\log\circle.png" />
+    <Content Include="topjui\image\timeaxis\log\clock.png" />
+    <Content Include="topjui\image\timeaxis\log\content-bg.png" />
+    <Content Include="topjui\image\timeaxis\log\light-top.png" />
+    <Content Include="topjui\image\timeaxis\log\light.png" />
+    <Content Include="topjui\image\timeaxis\log\line-bg.png" />
+    <Content Include="topjui\image\timeaxis\log\release-bg.png" />
+    <Content Include="topjui\js\extension\jquery.portal.js" />
+    <Content Include="topjui\js\locale\topjui.lang.en.js" />
+    <Content Include="topjui\js\locale\topjui.lang.zh_CN.js" />
+    <Content Include="topjui\js\locale\topjui.lang.zh_TW.js" />
+    <Content Include="topjui\js\topjui.core.min.js" />
+    <Content Include="topjui\js\topjui.license.js" />
+    <Content Include="topjui\themes\default\images\accordion_arrows.png" />
+    <Content Include="topjui\themes\default\images\accordion_arrows2.png" />
+    <Content Include="topjui\themes\default\images\accordion_arrows3.png" />
+    <Content Include="topjui\themes\default\images\blank.gif" />
+    <Content Include="topjui\themes\default\images\calendar_arrows.png" />
+    <Content Include="topjui\themes\default\images\combo_arrow.png" />
+    <Content Include="topjui\themes\default\images\datagrid_icons.png" />
+    <Content Include="topjui\themes\default\images\datebox_arrow.png" />
+    <Content Include="topjui\themes\default\images\layout_arrows.png" />
+    <Content Include="topjui\themes\default\images\linkbutton_bg.png" />
+    <Content Include="topjui\themes\default\images\loading.gif" />
+    <Content Include="topjui\themes\default\images\menu_arrows.png" />
+    <Content Include="topjui\themes\default\images\messager_icons.png" />
+    <Content Include="topjui\themes\default\images\pagination_icons.png" />
+    <Content Include="topjui\themes\default\images\panel_tools.png" />
+    <Content Include="topjui\themes\default\images\searchbox_button.png" />
+    <Content Include="topjui\themes\default\images\slider_handle.png" />
+    <Content Include="topjui\themes\default\images\spinner_arrows.png" />
+    <Content Include="topjui\themes\default\images\tabs_icons.png" />
+    <Content Include="topjui\themes\default\images\tree_icons.png" />
+    <Content Include="topjui\themes\default\images\validatebox_warning.png" />
+    <Content Include="topjui\themes\default\topjui.black.css" />
+    <Content Include="topjui\themes\default\topjui.blacklight.css" />
+    <Content Include="topjui\themes\default\topjui.blue.css" />
+    <Content Include="topjui\themes\default\topjui.bluelight.css" />
+    <Content Include="topjui\themes\default\topjui.green.css" />
+    <Content Include="topjui\themes\default\topjui.greenlight.css" />
+    <Content Include="topjui\themes\default\topjui.purple.css" />
+    <Content Include="topjui\themes\default\topjui.purplelight.css" />
+    <Content Include="topjui\themes\default\topjui.red.css" />
+    <Content Include="topjui\themes\default\topjui.redlight.css" />
+    <Content Include="topjui\themes\default\topjui.yellow.css" />
+    <Content Include="topjui\themes\default\topjui.yellowlight.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="static\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="static\plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="static\plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="static\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="static\plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="static\plugins\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="static\plugins\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="static\plugins\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="static\plugins\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="static\plugins\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="static\plugins\layui\font\iconfont.eot" />
+    <Content Include="static\plugins\layui\font\iconfont.ttf" />
+    <Content Include="static\plugins\layui\font\iconfont.woff" />
+    <Content Include="static\plugins\ueditor\jsp\config.json" />
+    <Content Include="static\plugins\ueditor\jsp\controller.jsp" />
+    <Content Include="static\plugins\ueditor\php\action_crawler.php" />
+    <Content Include="static\plugins\ueditor\php\action_list.php" />
+    <Content Include="static\plugins\ueditor\php\action_upload.php" />
+    <Content Include="static\plugins\ueditor\php\config.json" />
+    <Content Include="static\plugins\ueditor\php\controller.php" />
+    <Content Include="static\plugins\ueditor\php\Uploader.class.php" />
+    <Content Include="static\plugins\ueditor\third-party\jquery-1.10.2.min.map" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\font\vjs.eot" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\font\vjs.ttf" />
+    <Content Include="static\plugins\ueditor\third-party\video-js\font\vjs.woff" />
+    <Content Include="topjui\image\timeaxis\log\Thumbs.db" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\Home\Iframe.cshtml" />
+    <Content Include="Views\Home\TableDemo.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>16851</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:16851/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

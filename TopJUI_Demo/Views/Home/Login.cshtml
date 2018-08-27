@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登录</title>
+    <link rel="shortcut icon" href="/topjui/image/favicon.ico" />
+    <link rel="stylesheet" href="/static/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/plugins/font-awesome/css/font-awesome.min.css">
+    <link href="~/topjui/css/Login.css" rel="stylesheet" />
+</head>
+<body>
+    
+    <div class="box">
+        <div class="login-box">
+            <div class="login-title text-center">
+                <span class="flag"><i class="fa fa-user"></i> 用户登陆</span>
+                <h1>
+                    <small>TopJUI前端快速开发框架</small>
+                </h1>
+            </div>
+            <div class="login-content ">
+                <div class="form">
+                    <form id="modifyPassword" class="form-horizontal" action="#" method="post">
+                        <input type="hidden" id="referer" name="referer" value="${param.referer}">
+                        <div class="form-group">
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                    <input type="text" id="username" name="username" class="form-control" placeholder="用户名"
+                                           value="topjui">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-10 col-xs-offset-1">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+                                    <input type="password" id="password" name="password" class="form-control"
+                                           placeholder="密码" value="topjui">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-actions">
+                            <div class="col-xs-12 text-center">
+                                <button type="button" id="login" class="btn btn-sm btn-success">
+                                    <span class="fa fa-check-circle"></span> 登录
+                                </button>
+                                <button type="button" id="reset" class="btn btn-sm btn-danger">
+                                    <span class="fa fa-close"></span> 重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <span class="text-danger"><i class="fa fa-warning"></i> 用户名或密码错误，请重试！</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="~/static/public/jquery-1.10.2.js"></script>
+    <script type="text/javascript">
+        if (navigator.appName == "Microsoft Internet Explorer" &&
+                (navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0" ||
+                navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0" ||
+                navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0")
+        ) {
+            alert("您的浏览器版本过低，请使用360安全浏览器的极速模式或IE9.0以上版本的浏览器");
+        }
+    </script>
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e009829aacee566a7f4166d6485740e8";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+
+            $('#password').keyup(function (event) {
+                if (event.keyCode == "13") {
+                    $("#login").trigger("click");
+                    return false;
+                }
+            });
+
+            $("#login").on("click", function () {
+                submitForm();
+            });
+
+            function submitForm() {
+                if (navigator.appName == "Microsoft Internet Explorer" &&
+                        (navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE6.0" ||
+                        navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE7.0" ||
+                        navigator.appVersion.split(";")[1].replace(/[ ]/g, "") == "MSIE8.0")
+                ) {
+                    alert("您的浏览器版本过低，请使用360安全浏览器的极速模式或IE9.0以上版本的浏览器");
+                } else {
+                    var formData = {
+                        username: $('#username').val(),
+                        password: $('#password').val(),
+                        referer: $('#referer').val()
+                    };
+                    $.ajax({
+                        type: 'POST',
+                        url: '/json/response/login.json',
+                        contentType: "application/json; charset=utf-8",
+                        data: JSON.stringify(formData),
+                        success: function (data) {
+                            if (data.statusCode == 200) {
+                                //location.href = '/system/index/index?portal=${portal}';
+                                location.href = data.referer;
+                            } else {
+                                $('#myModal').modal();
+                                //alert("用户名或密码错误！");
+                            }
+                        },
+                        error: function () {
+
+                        }
+                    });
+                }
+            }
+
+            $("#reset").on("click", function () {
+                $("#username").val("");
+                $("#password").val("");
+            });
+        });
+    </script>
+
+</body>
+</html>
